@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+{% load static %}
+
+<div class="container formContainer">
+    <div class="row">
+        <div class="col-md-6 center-block">
+            <div class="col-md-12 card  pad-md-0">
+                <form action="{% url 'find_factoria' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="col-md-12 formHeader">
+                        <p>Input For The Factoria Challenge</p>
+                    </div>
+                    <div class="col-md-12 formContentField">
+                        <ol>
+                            <li>Hello, I am a FactO who can help you find the factoria of a number. </li>
+                            <li>Would you like me perform some magic for you? </li>
+                        </ol>
+
+                        <div class="col-md-12 pad-md mb-3">
+                            <label for="validationCustom01">
+                                <h3>Input An Integer To Find The Factoria</h3>
+                            </label>
+                            <input type="number" min="1" class="form-control" id="validationCustom01" placeholder="Input An Integer..."
+                                name="factoria" required="required">
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <button class="btn btn-default col-md-4 center-block formButtonSubmit" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        {% if factoria_output %}
+        <div class="col-md-6 center-block">
+            <div class="card pad-md-0 col-md-12">
+                <div class="col-md-12 formHeader">
+                    <p>Output For Factoria Challenge</p>
+                </div>
+                <div class="col-md-12 formContentField">
+                    <div class="col-md-12 pad-md-0 mb-3">
+                        <h3>Input</h3>
+                        <input type="text" class="form-control" id="validationCustom01" readonly value="{{factoria_input}}"
+                            required>
+                    </div>
+                    <div class="col-md-12 pad-md-0 mb-3">
+                        <h3>Final Result</h3>
+                        <input type="text" class="form-control" id="validationCustom01" readonly value="{{factoria_output}}"
+                            required>
+                    </div>
+                    <div class="col-md-12 pad-md-0 mb-3">
+                        <h4>The Factoria of {{factoria_input}} is <span class="badge">{{factoria_output}}</span></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+
+{% endblock %}

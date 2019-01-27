@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Face Of Bamiscrib Naija">
+    <meta name="keywords" content="Python Cheeky Challenge">
+
+    <meta name="author" content="">
+
+    <!-- CSRF Token -->
+    <link rel="shortcut icon" href="http://localhost/laravel/tallhows/public/img/logoo.png" />
+
+    <title>Python Cheeky Challenge</title>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+
+    <!-- Styles -->
+    {% load static %}
+    <link href="{% static 'assets/css/materia_bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/custom.min.css' %}" rel="stylesheet">
+    <!-- <link href="{% static 'assets/css/fontawesome.css' %}" rel="stylesheet"> -->
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="app">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <i class="fa fa-trophy"></i>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="#">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+
+                        <!-- Example single danger button -->
+                        <div class="btn-group nav-item">
+                            <a class="dropdown-toggle nav-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding-top: 15px;">
+                                Challenge
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="{% url 'home' %}">Sort string and remove duplicates</a>
+                                <a class="dropdown-item" href="{% url 'find_factoria' %}">Factoria</a>
+                                <a class="dropdown-item mute" href="#">Something else here</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                        </div>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/Huxteen">Github</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Twitter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contacts</a>
+                        </li>                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+
+
+
+{% block content %}
+
+{% endblock %}
+
+
+
+
+
+
+    <section class="footer_container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p><a href="#" target="_blank">Python Cheeky Challenge.</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/popper.min.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+</body>
+
+</html>

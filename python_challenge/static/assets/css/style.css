@@ -1,0 +1,116 @@
+body{
+    background: #eee;
+}
+.sard_fonts, div, p, small{
+    font-family: "Times New Roman",Times,serif,Georgia !important;
+}.center-block{
+    float: none;
+    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}.pad-md-0{
+    padding: 0px;
+}
+
+
+
+
+
+
+
+
+
+.formHeader{
+    background: #34444a;
+    color: #fff;
+    padding: 12px 15px 3px 15px;
+    font-size: 16px;
+}.formContainer{
+    margin-top: 50px;
+    margin-bottom: 120px;
+}.formContentField{
+    padding-top: 20px;
+    padding-bottom: 50px;
+}.formButtonSubmit{
+    background: #34444a;
+    color: #fff;
+    margin-top: 40px;
+    border: 1px solid #34444a !important;
+}.formButtonSubmit:hover, .formButtonSubmit:focus, .formButtonSubmit:active{
+    background: #34444a !important;
+    opacity: 0.8 !important;
+    border: 1px solid #34444a !important;
+    color: #fff !important;
+}
+
+
+/*Footer style */
+.footer_container{
+    background: #34444a;
+    color: #fff;
+    padding-top: 35px;
+    padding-bottom: 30px;
+}.footer_container a{
+    text-decoration: none;
+    color: #eee;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:990px){
+    
+}
+
+
+@media (min-width: 993px) and (max-width: 1200px)
+{
+
+
+}
+
+@media (min-width: 769px) and (max-width: 992px)
+{
+
+
+}
+
+@media (min-width: 480px) and (max-width: 768px)
+{
+
+.pad-sm-0{
+    padding: 0px;
+}
+.pad-sm-5{
+    padding: 5px;
+}
+.pad-sm-10{
+    padding: 10px;
+}
+
+
+}
+
+@media (min-width: 0px) and (max-width: 480px)
+{
+ .pad-xs-0{
+     padding: 0px;
+}.pad-xs-10{
+    padding: 10px;
+}.pad-xs-5{
+     padding: 5px;
+}
+}

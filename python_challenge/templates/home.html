@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+{% load static %}
+
+<div class="container formContainer">
+    <div class="row">  
+        <div class="col-md-6 center-block">
+            <div class="col-md-12 card  pad-md-0">
+                <form action="{% url 'sort_and_remove_duplicate' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="col-md-12 formHeader"><p>Input Sorting Challenge</p></div>
+                    <div class="col-md-12 formContentField">
+                        <ol>
+                            <li>Hello, I am a SARD who  can help you remove duplicate sort alphabetically and exclude other unwanted punctutions,numbers etc. </li>
+                            <li>Would you like me perform some magic for you? </li>
+                        </ol>
+                        
+                        <div class="col-md-12 pad-md mb-3">
+                            <label for="validationCustom01"><h3>Input String To Sort</h3></label>
+                            <input type="text" class="form-control" id="validationCustom01" placeholder="Input string here..." name="sort_and_remove_duplicate" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                    <button class="btn btn-default col-md-4 center-block formButtonSubmit" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>           
+        </div> 
+        {% if sort_output %}          
+        <div class="col-md-6 center-block">
+            <div class="card pad-md-0 col-md-12">
+                <div class="col-md-12 formHeader"><p>Output Sorting Challenge</p></div>
+                <div class="col-md-12 formContentField">
+                    <div class="col-md-12 pad-md-0 mb-3">
+                        <h3>Input</h3>
+                        <input type="text" class="form-control" id="validationCustom01" readonly value="{{sort_input}}" required>
+                    </div>
+                    <div class="col-md-12 pad-md-0 mb-3">
+                        <h3>Final Result</h3>
+                        <input type="text" class="form-control" id="validationCustom01" readonly value="{{sort_output}}" required>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        {% endif %}          
+    </div>
+</div>
+
+
+{% endblock %}

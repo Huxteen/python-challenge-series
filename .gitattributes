@@ -1,0 +1,3 @@
+# This ignores my stylesheet and html files
+static/* linguist-vendored
+python_challenge/static/* linguist-vendored
